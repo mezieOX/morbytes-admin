@@ -1,110 +1,64 @@
 "use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import {
-  AddIcon,
-  AppIcon,
-  BarIcon,
-  LikesIcon,
-  Message2Icon,
-  SearchIcon,
-  SettingsIcon,
-} from "@/assets/icons";
-import { CreateModal } from "@/components/global/Modals";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { AppIcon, BarIcon, ManagementIcon, UploadsIcon } from "@/assets/icons";
 
 const routes = [
   {
-    name: "Home",
+    name: "Dashboard",
     link: "/",
     Icon: BarIcon,
     id: 1,
   },
   {
-    name: "Activities",
-    link: "/activities",
-    Icon: LikesIcon,
+    name: "Upload",
+    link: "/upload",
+    Icon: UploadsIcon,
     id: 2,
   },
   {
-    name: "Create",
-    link: "/create",
-    Icon: AddIcon,
+    name: "Management",
+    link: "/management",
+    Icon: ManagementIcon,
     id: 3,
-  },
-  {
-    name: "Search",
-    link: "/search",
-    Icon: SearchIcon,
-    id: 4,
-  },
-  {
-    name: "Chats",
-    link: "/chats",
-    Icon: Message2Icon,
-    id: 5,
-  },
-  {
-    name: "Account",
-    link: "/account",
-    Icon: Message2Icon,
-    id: 6,
-  },
-  {
-    name: "Settings",
-    link: "/settings",
-    Icon: SettingsIcon,
-    id: 7,
   },
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const current = usePathname();
 
   return (
-    <>
-      <header className="flex-grow">
-        <nav className="mt-[81px]">
-          <Link href="/" className="">
-            <AppIcon className="fill-current w-[30px] h-[28px]  lg:w-[83px] lg:h-[55.32px] text-white" />
-          </Link>
-          <ul className="mt-[6.3rem]">
-            {routes.map((route) => (
-              <li
-                key={route.id}
-                className={`border-0 outline-none text-2xl leading-normal  hover:transition-all relative  font-normal -ml-4 flex flex-col`}
+    <header className="relative min-w-[243.8px]">
+      <div className="absolute h-[40rem] w-[3px] bg-dark-semi right-0 top-[153.4px]"></div>
+      <nav className="mt-[68px]">
+        <Link href="/" className="">
+          <AppIcon className="fill-current w-[30px] h-[28px]  lg:w-[53px] lg:h-[40px] text-white" />
+        </Link>
+        <ul className="mt-[4.4rem] ">
+          {routes.map((route) => (
+            <li
+              key={route.id}
+              className={`border-0 outline-none text-xl leading-normal  hover:transition-all relative  font-normal -ml-4 flex flex-col`}
+            >
+              <Link
+                href={route.link}
+                className={`flex items-center pl-4 pr-9 my-[18px] hover:duration-500 rounded-[7.57px]   gap-[20px] py-[8px] tracking-[0.07rem] w-min mt-2.5 ${
+                  current === route.link ? "font-black" : ""
+                }`}
               >
-                <Link
-                  onClick={() => setIsOpen(true)}
-                  href={route.link}
-                  className={`flex items-center pl-4 pr-9 my-[17px] hover:duration-500 hover:bg-dark-bolder/10 rounded-[7.57px] hover:!text-dark-bolder/60  gap-[30px] py-[8px] tracking-wider w-min mt-2.5 last:hover:text-white ${
-                    route.Icon === SettingsIcon
-                      ? "mt-40 hover:bg-transparent hover:text-white"
-                      : ""
-                  } ${current === route.link ? "bg-dark-bolder/10" : ""}`}
-                >
-                  <route.Icon
-                    className={`w-[2.3rem] h-[2.3rem] fill-current ${
-                      route.Icon === AddIcon
-                        ? "!fill-none !w-[2.5rem] !h-[2.5rem]"
-                        : ""
-                    } ${
-                      route.Icon === SearchIcon
-                        ? "!fill-none text-white !w-[2.5rem] !h-[2.5rem] -mb-[2.5px]"
-                        : ""
-                    } `}
-                  />
-                  <div className="pr-10">{route.name}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-      <CreateModal isOpen={isOpen} onClose={setIsOpen} />
-    </>
+                <route.Icon
+                  className={`w-[28.5px] ${
+                    route.Icon === UploadsIcon ? "!w-[24px]" : ""
+                  }  ${route.Icon === ManagementIcon ? "!w-[30px]" : ""}`}
+                />
+                <div className="pr-2">{route.name}</div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
 

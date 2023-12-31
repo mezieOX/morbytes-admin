@@ -1,6 +1,6 @@
 import AppIcon from "./brands/AppIcon";
 import ShareIcon from "./Share";
-import LikesIcon from "./Likes";
+import UploadsIcon from "./Uploads";
 import MenuIcon from "./Menu";
 import MessageIcon from "./Message";
 import ReTweetIcon from "./Re-tweet";
@@ -8,13 +8,13 @@ import BarIcon from "./Bar";
 import Message2Icon from "./Message2";
 import SearchIcon from "./Search";
 import SettingsIcon from "./Settings";
-import AddIcon from "./Add";
+import ManagementIcon from "./Management";
 import VerifiedBadge from "./brands/VerifiedBadge";
 
 export {
   AppIcon,
   ShareIcon,
-  LikesIcon,
+  UploadsIcon,
   MenuIcon,
   MessageIcon,
   ReTweetIcon,
@@ -22,6 +22,6 @@ export {
   Message2Icon,
   SearchIcon,
   SettingsIcon,
-  AddIcon,
+  ManagementIcon,
   VerifiedBadge,
 };

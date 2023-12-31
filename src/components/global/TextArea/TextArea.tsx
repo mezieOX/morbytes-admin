@@ -6,6 +6,7 @@ const TextArea: React.FC<ITextArea> = ({
   label,
   labelClassName,
   containerClass,
+  totalChar = true,
 }) => {
   return (
     <>
@@ -23,10 +24,12 @@ const TextArea: React.FC<ITextArea> = ({
           placeholder={placeholder}
         ></textarea>
       </div>
-      <p className="ml-auto -mt-1 text-[10px] text-dark-bolder/60 italic">
-        {" "}
-        0/200
-      </p>
+      {totalChar && (
+        <p className="ml-auto -mt-1 text-[10px] text-dark-bolder/60 italic">
+          {" "}
+          0/200
+        </p>
+      )}
     </>
   );
 };

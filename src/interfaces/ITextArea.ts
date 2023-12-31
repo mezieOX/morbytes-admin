@@ -6,4 +6,5 @@ export interface ITextArea {
   labelClassName?: string;
   containerClass?: string;
   label?: string;
+  totalChar?: boolean;
 }

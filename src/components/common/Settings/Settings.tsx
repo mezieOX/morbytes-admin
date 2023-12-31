@@ -2,6 +2,7 @@
 
 import { Tab } from "@headlessui/react";
 import SettingsInfo from "./SettingsInfo/SettingsInfo";
+import Help from "./Help/Help";
 
 const lists = [
   {
@@ -60,7 +61,7 @@ const SettingsScreen = () => {
           </Tab.Panel>
           <Tab.Panel>
             {" "}
-            <SettingsInfo />
+            <Help />
           </Tab.Panel>
           {/* ... */}
         </Tab.Panels>
