@@ -9,23 +9,29 @@ const Button: FC<IButton> = ({
   icon,
   title,
   onClick,
+  btnSecondaryClassName,
+  btnSecondarySpanClassName,
 }) => {
   return (
     <>
       {variant === "primary" && (
-        <button className={`bg-primary text-dark text-[9.5px] rounded cursor-pointer px-[12px] py-[1px] font-black ${className}`}>
+        <button
+          className={`bg-primary text-dark text-[9.5px] rounded cursor-pointer px-[12px] py-[1px] font-black ${className}`}
+        >
           {children}
         </button>
       )}
       {variant === "secondary" && (
         <button
-          className="lg:rounded-[3.59px] rounded-[1.44px]  bg-primary  lg:pl-4 pl-2 flex-shrink-0  flex justify-center  items-center"
+          className={` ${btnSecondaryClassName} lg:rounded rounded-[1.44px]  bg-primary text-dark   lg:pl-2 lg:pr-4 pl-2 flex-shrink-0  flex text-sm font-black  justify-center  items-center max-h-9`}
           onClick={onClick}
         >
-          {icon && icon}
-          <span className="lg:text-[17.93px] text-[9.19px] mr-[.4rem] lg:ml-2.5 ml-1.5 font-bold leading-normal text-dark lg:pt-4 pt-2.5 lg:pb-2 pb-1.5 text-sm ">
+          <span
+            className={`lg:text-[14px] text-[9.19px] mr-[.4rem] lg:pr-2 lg:ml-2.5 ml-1.5  leading-normal lg:py-2 pt-2.5 lg:pb-2 pb-1.5 ${btnSecondarySpanClassName} `}
+          >
             {title}
           </span>
+          {icon && icon}
         </button>
       )}
       {variant === "outline" && (

@@ -2,35 +2,24 @@ import { ITextArea } from "@/interfaces";
 
 const TextArea: React.FC<ITextArea> = ({
   className,
-  placeholder = "Tell people a little more about yourself...",
+  placeholder = "Enter the Description of the movie",
   label,
   labelClassName,
   containerClass,
-  totalChar = true,
 }) => {
   return (
-    <>
-      <div
-        className={`flex items-start gap-[5.8rem] my-[.8rem] ${containerClass}`}
+    <div className={`flex  flex-col  ${containerClass}`}>
+      <label
+        htmlFor="input"
+        className={`text-white mb-1 !text-[22px] !tracking-wide" ${labelClassName}`}
       >
-        <label
-          htmlFor="input"
-          className={`text-white text-xl my-1.5 ${labelClassName}`}
-        >
-          {label}
-        </label>
-        <textarea
-          className={`border-0 outline-0 flex-1 rounded-md px-4 py-2 bg-dark/60 font-normal leading-6 text-[10px] text-dark-bolder/60 h-[7.6rem]  italic placeholder:text-dark-bolder/60 ${className}`}
-          placeholder={placeholder}
-        ></textarea>
-      </div>
-      {totalChar && (
-        <p className="ml-auto -mt-1 text-[10px] text-dark-bolder/60 italic">
-          {" "}
-          0/200
-        </p>
-      )}
-    </>
+        {label}
+      </label>
+      <textarea
+        className={`border-0 outline-0 flex-1 rounded-md px-[22px] py-[14px] bg-dark-bold/10 font-normal tracking-wide leading-6 text-sm text-dark-bold/60 min-h-40  italic placeholder:text-dark-bold/60 ${className}`}
+        placeholder={placeholder}
+      ></textarea>
+    </div>
   );
 };
 

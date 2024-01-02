@@ -1,34 +1,29 @@
 import { IInput } from "@/interfaces";
 
-const Input: React.FC<IInput> = ({
+const Input2: React.FC<IInput> = ({
   className,
-  placeholder = "Leave a Comment as User23464...",
+  placeholder = "Type Here..",
   label,
   labelClassName,
   type = "text",
-  postBtn = true,
+  containerClass,
 }) => {
   return (
-    <div className="w-full flex flex-col mt-[5.2px]">
+    <div className={`flex  flex-col  ${containerClass}`}>
       <label
         htmlFor="input"
-        className={`text-dark-lighter/40 text-lg mb-1.5 ${labelClassName}`}
+        className={`text-white mb-1 !text-[22px] !tracking-wide" ${labelClassName}`}
       >
         {label}
       </label>
       <input
         id="input"
         type={type}
-        className={`border-0 border-dark-extraBold outline-0 flex-1 mx-[5.5px]  bg-transparent font-normal leading-4 text-[6.3px] text-dark-lighter/40 italic placeholder:text-dark-lighter/40 border-b ${className}`}
+        className={`border-0 outline-0 flex-1 rounded-md px-[22px] py-[14px] bg-dark-bold/10 font-normal tracking-wide leading-6 text-sm text-dark-bold/60  italic placeholder:text-dark-bold/60 ${className}`}
         placeholder={placeholder}
       />
-      {postBtn && (
-        <div className="text-primary ml-auto text-[10px] font-black mx-[5px] mt-[7px] cursor-pointer">
-          Post
-        </div>
-      )}
     </div>
   );
 };
 
-export default Input;
+export default Input2;

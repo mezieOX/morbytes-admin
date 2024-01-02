@@ -12,4 +12,6 @@ export interface IButton {
   linkText?: string;
   icon?: React.ReactNode;
   title?: string;
+  btnSecondaryClassName?: string;
+  btnSecondarySpanClassName?: string;
 }

@@ -5,3 +5,5 @@ export * from "./IInput";
 export * from "./IButton";
 export * from "./IPost";
 export * from "./ITextArea";
+export * from "./IListCard";
+export * from "./ISearch";

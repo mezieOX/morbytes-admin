@@ -10,6 +10,9 @@ import SearchIcon from "./Search";
 import SettingsIcon from "./Settings";
 import ManagementIcon from "./Management";
 import VerifiedBadge from "./brands/VerifiedBadge";
+import EditIcon from "./Edit";
+import DeleteIcon from "./Delete";
+import AddIcon from "./Add";
 
 export {
   AppIcon,
@@ -24,4 +27,7 @@ export {
   SettingsIcon,
   ManagementIcon,
   VerifiedBadge,
+  EditIcon,
+  DeleteIcon,
+  AddIcon,
 };
