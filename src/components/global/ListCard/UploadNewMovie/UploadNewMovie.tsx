@@ -42,6 +42,7 @@ const UploadNewMovie = () => {
             />
           </div>
         ))}
+        
 
         <Button
           variant={"secondary"}

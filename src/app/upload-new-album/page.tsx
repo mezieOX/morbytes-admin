@@ -5,10 +5,16 @@ import ListCard from "@/components/global/ListCard/ListCard";
 
 const ViewAllMovies = () => {
   return (
-    <RootLayout title={"View All Movie"}>
+    <RootLayout title={"Upload New Album"}>
       <MainLayout>
         <div>
-          <ListCard data={profileTab} loginAs={true} title="" search={true} />
+          <ListCard
+            data={profileTab}
+            uploadNewAlbum={true}
+            loginAs={true}
+            title=""
+            search={true}
+          />
         </div>
       </MainLayout>
     </RootLayout>

@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
       <body
         className={`relative font-poppins ${
-          title === "Login" && "bg-gray-light"
+          title === undefined && "bg-gray-light"
         }  ${title !== "Login" && "bg-dark"} text-white ${className}`}
       >
         {children}

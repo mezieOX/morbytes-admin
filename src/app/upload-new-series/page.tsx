@@ -5,7 +5,7 @@ import ListCard from "@/components/global/ListCard/ListCard";
 
 const ViewAllMovies = () => {
   return (
-    <RootLayout title={"View All Movie"}>
+    <RootLayout title={"Upload New Movie"}>
       <MainLayout>
         <div>
           <ListCard

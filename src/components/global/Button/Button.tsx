@@ -24,11 +24,11 @@ const Button: FC<IButton> = ({
       )}
       {variant === "secondary" && (
         <button
-          className={` ${btnSecondaryClassName} lg:rounded rounded-[1.44px]  bg-primary text-dark   lg:pl-2 lg:pr-4 pl-2 flex-shrink-0  flex text-sm font-black  justify-center  items-center max-h-9`}
+          className={` ${btnSecondaryClassName} lg:rounded rounded-[1.44px]  bg-primary text-dark  pr-4 pl-2 flex-shrink-0  flex text-sm font-black  justify-center  items-center max-h-9`}
           onClick={onClick}
         >
           <span
-            className={`lg:text-[14px] text-[9.19px] mr-[.4rem] lg:pr-2 lg:ml-2.5 ml-1.5  leading-normal lg:py-2 pt-2.5 lg:pb-2 pb-1.5 ${btnSecondarySpanClassName} `}
+            className={`text-[14px] mr-[.4rem] lg:pr-2 lg:ml-2.5 ml-1.5  leading-normal lg:py-2 pt-2.5 lg:pb-2 pb-1.5 ${btnSecondarySpanClassName} `}
           >
             {title}
           </span>

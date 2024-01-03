@@ -5,3 +5,5 @@ export * from "./RegisteredAdmin";
 export * from "./UploadOption";
 export * from "./SongUploadOption";
 export * from "./UploadAPublishedNewsOption";
+export * from "./UploadSeriesOption";
+export * from "./UploadAlbumOption";
