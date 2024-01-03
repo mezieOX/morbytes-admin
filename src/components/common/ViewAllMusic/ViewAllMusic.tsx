@@ -2,12 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { IListCard } from "@/interfaces";
+import { IListCard, IListCardData } from "@/interfaces";
 import { LoginAsCard, Search } from "@/components/global";
 import { AddIcon, DeleteIcon, EditIcon } from "@/assets/icons";
 import { Button } from "@/components/global/Button";
 
-const ViewAllMusic: React.FC<IListCard> = ({ data = [] }) => {
+const ViewAllMusic: React.FC<{ data?: IListCardData[] }> = ({ data = [] }) => {
   return (
     <div className={`w-full mt-[4.7rem] max-w-[58.8rem]`}>
       <LoginAsCard />
@@ -19,7 +19,7 @@ const ViewAllMusic: React.FC<IListCard> = ({ data = [] }) => {
           containerClassName="-mt-[26px] mb-[2.2rem] mx-[30px]"
         />
 
-        {data.map(({ id, image, title, description }: IListCard) => (
+        {data.map(({ id, image, title, description }) => (
           <div key={id}>
             <div className={"min-w-[56.2rem]"}></div>
             <div className="flex items-center text-left mt-1 justify-start gap-[15px] cursor-pointer py-[3px] border-b-[3px] border-dark-semi">

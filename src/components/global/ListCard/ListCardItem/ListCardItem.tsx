@@ -5,9 +5,8 @@ import Link from "next/link";
 
 import { AddIcon, DeleteIcon, EditIcon } from "@/assets/icons";
 import { Button } from "@/components/global/Button";
-import { IListCard } from "@/interfaces";
 
-const ListCardItem: React.FC<IListCard> = ({
+const ListCardItem: React.FC<any> = ({
   data = [],
   btnTitle,
   btnTitle1,
@@ -20,7 +19,6 @@ const ListCardItem: React.FC<IListCard> = ({
 }) => {
   const current = usePathname();
 
-  // let btnTitle1;
   let btnTitle2;
 
   if (current === "/view-all-music") {
@@ -40,7 +38,7 @@ const ListCardItem: React.FC<IListCard> = ({
         management ? "-mt-8" : ""
       }`}
     >
-      {data.map(({ id, image, title, description }: IListCard) => (
+      {data.map(({ id, image, title, description }: any) => (
         <div key={id}>
           {!management && (
             <div className="flex items-center text-left mt-1 justify-start gap-[15px] cursor-pointer py-[3px] border-b-[3px] border-dark-semi">

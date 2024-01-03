@@ -1,5 +1,4 @@
 import RootLayout from "@/app/layout";
-import { registeredAdmin } from "@/data";
 import MainLayout from "@/components/layouts";
 import { AddNewAdmin } from "@/components/common/Management/AddNewAdmin";
 
