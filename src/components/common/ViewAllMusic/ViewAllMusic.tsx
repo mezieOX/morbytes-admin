@@ -2,35 +2,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Search } from "@/components/global";
+import { IListCard } from "@/interfaces";
+import { LoginAsCard, Search } from "@/components/global";
 import { AddIcon, DeleteIcon, EditIcon } from "@/assets/icons";
 import { Button } from "@/components/global/Button";
-import { IListCard } from "@/interfaces";
-import { Profile35 } from "@/constant/imgs";
 
 const ViewAllMusic: React.FC<IListCard> = ({ data = [] }) => {
   return (
     <div className={`w-full mt-[4.7rem] max-w-[58.8rem]`}>
-      <div className="flex items-end text-left  justify-end gap-[15px] py-[3px]">
-        <div className={"-mr-6"}>
-          <p className="text-[12px] tracking-wider">Logged in:</p>
-          <Button
-            variant={"primary"}
-            className="text-dark !pl-[14px] !pr-[11px] my-[5px] !py-[7px] !bg-dark-bold tracking-[0.4px] font-black text-sm rounded-s-full cursor-auto"
-          >
-            {"Admin123455..."}
-          </Button>
-        </div>
-        <Image
-          src={Profile35}
-          alt="title"
-          className="w-[58px] h-[58px] -mb-[8px]"
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      <LoginAsCard />
       <div className={"my-[26px] mx-[30px]"}>
         <Search
-          className="!flex-1 !text-dark !-mt-3 !text-[10px] placeholder:!text-dark"
+          className="!flex-1 !text-dark !w-[22rem] !-mt-2.5 !text-[10px] placeholder:!text-dark"
           placeholder={"Search an uploaded music..."}
           buttonClassName="!mx-0"
           containerClassName="-mt-[26px] mb-[2.2rem] mx-[30px]"
@@ -68,14 +51,14 @@ const ViewAllMusic: React.FC<IListCard> = ({ data = [] }) => {
             <Button
               variant={"secondary"}
               icon={<AddIcon className="w-5" />}
-              title={"Upload New Movie"}
+              title={"Upload New Song"}
             />
           </Link>
           <Link href={"upload-new-series"}>
             <Button
               variant={"secondary"}
               icon={<AddIcon className="w-5" />}
-              title={"Upload New Series"}
+              title={"Upload New Album"}
             />
           </Link>
         </div>

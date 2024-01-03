@@ -12,6 +12,7 @@ export interface IListCard {
   loginAs?: boolean;
   management?: boolean;
   firstBtnLink: string;
+  btnTitle1: string;
   secondBtnLink: string;
   thirdBtnLink: string;
   subElementClassName?: string;

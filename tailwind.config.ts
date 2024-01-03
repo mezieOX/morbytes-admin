@@ -24,6 +24,7 @@ const config: Config = {
         },
         gray: {
           DEFAULT: "#0F0F0F",
+          light: "#EAE9E9",
         },
         red: {
           DEFAULT: "#FF0000",

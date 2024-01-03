@@ -10,6 +10,7 @@ import { IListCard } from "@/interfaces";
 const ListCardItem: React.FC<IListCard> = ({
   data = [],
   btnTitle,
+  btnTitle1,
   secondBtn,
   btnClassName,
   management,
@@ -19,19 +20,19 @@ const ListCardItem: React.FC<IListCard> = ({
 }) => {
   const current = usePathname();
 
-  let btnTitle1;
+  // let btnTitle1;
   let btnTitle2;
 
   if (current === "/view-all-music") {
-    btnTitle1 = "Upload New Song";
+    // btnTitle1 = "Upload New Song";
     btnTitle2 = "Upload New Album";
   } else if (current === "/view-all-movies") {
-    btnTitle1 = "Upload New Movie";
+    // btnTitle1 = "Upload New Movie";
     btnTitle2 = "Upload New Series";
   } else if (current === "/published-news") {
     btnTitle2 = "Publish New";
   } else {
-    btnTitle1 = "Upload New Movie";
+    // btnTitle1 = "Upload New Movie";
   }
   return (
     <div
@@ -41,7 +42,7 @@ const ListCardItem: React.FC<IListCard> = ({
     >
       {data.map(({ id, image, title, description }: IListCard) => (
         <div key={id}>
-           {!management && (
+          {!management && (
             <div className="flex items-center text-left mt-1 justify-start gap-[15px] cursor-pointer py-[3px] border-b-[3px] border-dark-semi">
               <Image
                 src={image ?? ""}

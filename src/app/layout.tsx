@@ -10,7 +10,11 @@ export const metadata: IMetaData = {
   image: logo,
 };
 
-export default function RootLayout({ children, title }: Readonly<IRootLayout>) {
+export default function RootLayout({
+  children,
+  title,
+  className,
+}: Readonly<IRootLayout>) {
   const pageTitle =
     title !== undefined
       ? `${title} - Morbytes Admin Dashboard`
@@ -21,7 +25,7 @@ export default function RootLayout({ children, title }: Readonly<IRootLayout>) {
       <head>
         <title>{String(pageTitle)}</title>
       </head>
-      <body className="relative font-poppins bg-dark text-white">
+      <body className={`relative font-poppins bg-dark text-white ${className}`}>
         {children}
       </body>
     </html>

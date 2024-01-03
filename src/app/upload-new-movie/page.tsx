@@ -3,9 +3,9 @@ import RootLayout from "../layout";
 import { profileTab } from "@/data";
 import ListCard from "@/components/global/ListCard/ListCard";
 
-const ViewAllMovies = () => {
+const ViewAllMovie = () => {
   return (
-    <RootLayout title={"View All Movie"}>
+    <RootLayout title={"Upload New Movie"}>
       <MainLayout>
         <div>
           <ListCard
@@ -21,4 +21,4 @@ const ViewAllMovies = () => {
   );
 };
 
-export default ViewAllMovies;
+export default ViewAllMovie;

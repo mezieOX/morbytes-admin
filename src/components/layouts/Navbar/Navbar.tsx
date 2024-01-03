@@ -27,7 +27,6 @@ const routes = [
 
 const Navbar = () => {
   const current = usePathname();
-  console.log(current);
 
   return (
     <header className="relative min-w-[243.8px]">
@@ -35,8 +34,10 @@ const Navbar = () => {
         className={`absolute !h-[700px] ${
           current === "/published-news" ? "!h-[36rem]" : ""
         } ${current === "/view-all-news" ? "!h-[36rem]" : ""} 
-        ${current === "/view-all-music" ? "!h-[36rem]" : ""} ${
-          current === "/view-all-movies" ? "!h-[35.9rem]" : ""
+        ${current === "/view-all-music" ? "!h-[35.8rem]" : ""} ${
+          current === "/view-all-published-news" ? "!h-[35.8rem]" : ""
+        } ${
+          current === "/view-all-movie" ? "!h-[34.9rem]" : ""
         }  w-[3px] bg-dark-semi right-0 top-[153.4px]`}
       ></div>
       <nav className="mt-[68px]">

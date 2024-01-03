@@ -46,6 +46,7 @@ import Profile32 from "@/assets/imgs/img40.png";
 import Profile33 from "@/assets/imgs/img41.png";
 import Profile34 from "@/assets/imgs/img42.png";
 import Profile35 from "@/assets/imgs/img43.png";
+import LoginImg from "@/assets/imgs/login/loginImg.png";
 
 export {
   logo,
@@ -95,4 +96,5 @@ export {
   Profile33,
   Profile34,
   Profile35,
+  LoginImg,
 };

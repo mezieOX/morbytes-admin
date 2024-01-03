@@ -16,7 +16,7 @@ const TextArea: React.FC<ITextArea> = ({
         {label}
       </label>
       <textarea
-        className={`border-0 outline-0 flex-1 rounded-md px-[22px] py-[14px] bg-dark-bold/10 font-normal tracking-wide leading-6 text-sm text-dark-bold/60 min-h-40  italic placeholder:text-dark-bold/60 ${className}`}
+        className={`border-0 outline-0 flex-1 rounded-md px-[22px] py-[14px] bg-dark-bold/10 font-normal tracking-wide leading-6 text-sm text-dark-bold/60 min-h-[8rem]  italic placeholder:text-dark-bold/60 ${className}`}
         placeholder={placeholder}
       ></textarea>
     </div>

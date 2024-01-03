@@ -13,6 +13,7 @@ import UploadNewAlbum from "./UploadNewAlbum/UploadNewAlbum";
 const ListCard: React.FC<IListCard | any> = ({
   data,
   title = "Uploaded Movies",
+  btnTitle1 = "Upload New Movie",
   loginAs = false,
   className,
   firstBtnLink = "/",
@@ -54,7 +55,7 @@ const ListCard: React.FC<IListCard | any> = ({
           />
         </div>
       )}
-      <div className={`pl-10 py-2 ${subElementClassName}`}>
+      <div className={`pl-8 py-2 ${subElementClassName}`}>
         <div className="">
           <h1
             className={`text-[26px] tracking-wider font-black ${
@@ -77,6 +78,7 @@ const ListCard: React.FC<IListCard | any> = ({
             secondBtn={secondBtn}
             btnClassName={btnClassName}
             management={management}
+            btnTitle1={btnTitle1}
             firstBtnLink={firstBtnLink}
             secondBtnLink={secondBtnLink}
             thirdBtnLink={thirdBtnLink}

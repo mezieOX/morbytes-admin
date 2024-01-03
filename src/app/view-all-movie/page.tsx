@@ -3,7 +3,7 @@ import RootLayout from "../layout";
 import { profileTab } from "@/data";
 import { ViewAllMovie } from "@/components/common/ViewAllMovie";
 
-const ViewAllMovies = () => {
+const ViewAllMovieScreen = () => {
   return (
     <RootLayout title={"View All Movie"}>
       <MainLayout>
@@ -15,4 +15,4 @@ const ViewAllMovies = () => {
   );
 };
 
-export default ViewAllMovies;
+export default ViewAllMovieScreen;

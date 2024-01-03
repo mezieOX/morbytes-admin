@@ -10,7 +10,7 @@ const UploadPage = () => {
         <div>
           <ListCard
             data={profileTab}
-            firstBtnLink="view-all-movies"
+            firstBtnLink="view-all-movie"
             secondBtnLink="upload-new-movie"
             thirdBtnLink="upload-new-series"
             cardItemsScreen={true}
@@ -22,6 +22,7 @@ const UploadPage = () => {
             className={"!-mt-1.5"}
             cardItemsScreen={true}
             btnTitle={"Upload New Album"}
+            btnTitle1={"Upload New Music"}
             firstBtnLink="view-all-music"
             secondBtnLink="upload-new-music"
             thirdBtnLink="upload-new-album"
@@ -30,12 +31,12 @@ const UploadPage = () => {
             data={publishedNews}
             title={"Published  News"}
             className={"!-mt-1.5"}
-            btnTitle={"Published  News"}
+            btnTitle={"Upload New"}
             secondBtn={false}
             cardItemsScreen={true}
             btnClassName={"!gap-10"}
-            firstBtnLink="published-news"
-            thirdBtnLink="view-all-published-news"
+            firstBtnLink="view-all-published-news"
+            thirdBtnLink="published-news"
           />
         </div>
       </MainLayout>
