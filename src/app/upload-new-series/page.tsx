@@ -8,7 +8,13 @@ const ViewAllMovies = () => {
     <RootLayout title={"View All Movie"}>
       <MainLayout>
         <div>
-          <ListCard data={profileTab} loginAs={true} title="" search={true} />
+          <ListCard
+            data={profileTab}
+            loginAs={true}
+            uploadNewSeries={true}
+            title=""
+            search={true}
+          />
         </div>
       </MainLayout>
     </RootLayout>

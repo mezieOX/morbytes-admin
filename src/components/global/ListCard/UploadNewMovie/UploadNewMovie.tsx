@@ -6,38 +6,39 @@ import { UploadsIcon } from "@/assets/icons";
 
 const UploadNewMovie = () => {
   return (
-    <div className="flex flex-col -mt-[6px] min-w-[56.2rem] pl-7">
+    <div className="flex flex-col -mt-[6px] min-w-[56.2rem] pl-6">
       <div>
-        <h1 className="text-[24.5px] font-black tracking-wider">
+        <h1 className="text-[25px] font-black tracking-[0.060rem]">
           Upload a New Movie
         </h1>
       </div>
-      <div className="flex flex-col gap-[31px] max-w-[684px]  my-[35px]">
+      <div className="flex flex-col gap-[31px] max-w-[684px]  my-[33px]">
         <Input
           label="Movie Title"
+          labelClassName="!tracking-[0.030rem]"
           placeholder={"Enter the title of the movie"}
         />
         <TextArea
           label="Movie Description"
+          labelClassName="!tracking-[0.045rem]"
           containerClass="-mt-2"
-          labelClassName="tracking-wide"
         />
       </div>
 
-      <div className="flex flex-col gap-[31px] w-max mt-3 max-w-[30rem]">
+      <div className="flex flex-col gap-[25px] w-max mt-3 min-w-[30.1rem]">
         {uploadOption.map(({ id, title }) => (
           <div
-            className="border-0 outline-0 flex-1 rounded-md px-[28px] py-[14px] bg-dark-bold/10 font-normal tracking-wide items-center justify-between flex leading-6 text-sm text-dark-bold/60 placeholder:text-dark-bold/60 shadow-[0px_7px_10px_2px_#00000040]"
+            className="border-0 outline-0 flex-1 rounded-[8px] px-[30px] py-[14px] bg-dark-bold/20 font-normal tracking-wide items-center justify-between flex leading-6 text-sm text-dark-bold/60 placeholder:text-dark-bold/60 shadow-[0px_7px_10px_2px_#00000040] max-w-fit"
             key={id}
           >
-            <p className="text-white !text-[22px] !tracking-wide  flex-1 pr-4">
+            <p className="text-white text-[22px] tracking-[0.06rem]  flex-1 pr-4 min-w-fit">
               {title}
             </p>
             <Button
               variant={"secondary"}
               className="!text-white"
               title={"Select from your Computer"}
-              btnSecondaryClassName={`!py-0`}
+              btnSecondaryClassName={`!py-0 !max-h-[32px] !my-[2.5px]`}
             />
           </div>
         ))}
@@ -46,8 +47,8 @@ const UploadNewMovie = () => {
           variant={"secondary"}
           icon={<UploadsIcon className="!w-8 !h-8" />}
           title="Upload"
-          btnSecondarySpanClassName={"!text-2xl font-black "}
-          btnSecondaryClassName="text-white !bg-red !px-10 w-min !py-8 my-10 !py-5  rounded"
+          btnSecondarySpanClassName={"!text-[22.5px] !tracking-wide font-black"}
+          btnSecondaryClassName="text-white !bg-red !px-[1.5rem] w-min !py-7 my-[2.7rem] !py-5  rounded"
         ></Button>
       </div>
     </div>

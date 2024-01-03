@@ -3,8 +3,10 @@ import { Login } from "@/components/common/Login";
 
 const LoginScreen = () => {
   return (
-    <RootLayout title={"Login"} className={"!bg-gray-light min-h-screen"}>
-      <Login />
+    <RootLayout title={"Login"} className="!bg-gray-light">
+      <div className={"bg-gray-light relative z-[1]"}>
+        <Login />
+      </div>
     </RootLayout>
   );
 };

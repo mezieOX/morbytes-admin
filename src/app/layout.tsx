@@ -25,7 +25,11 @@ export default function RootLayout({
       <head>
         <title>{String(pageTitle)}</title>
       </head>
-      <body className={`relative font-poppins bg-dark text-white ${className}`}>
+      <body
+        className={`relative font-poppins ${
+          title === "Login" && "bg-gray-light"
+        }  ${title !== "Login" && "bg-dark"} text-white ${className}`}
+      >
         {children}
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { profileTab, publishedNews, uploadedMusic } from "@/data";
+import { profileTab } from "@/data";
 import RootLayout from "../layout";
 import MainLayout from "@/components/layouts";
 import ListCard from "@/components/global/ListCard/ListCard";

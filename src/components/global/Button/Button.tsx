@@ -16,6 +16,7 @@ const Button: FC<IButton> = ({
     <>
       {variant === "primary" && (
         <button
+          onClick={onClick}
           className={`bg-primary text-dark text-[9.5px] rounded cursor-pointer px-[12px] py-[1px] font-black ${className}`}
         >
           {children}

@@ -5,5 +5,6 @@ export interface IInput {
   labelClassName?: string;
   type?: string;
   postBtn?: boolean;
+  required?: boolean;
   containerClass?: string;
 }

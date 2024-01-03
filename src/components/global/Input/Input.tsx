@@ -4,6 +4,7 @@ const Input2: React.FC<IInput> = ({
   className,
   placeholder = "Type Here..",
   label,
+  required,
   labelClassName,
   type = "text",
   containerClass,
@@ -18,6 +19,7 @@ const Input2: React.FC<IInput> = ({
       </label>
       <input
         id="input"
+        required={required}
         type={type}
         className={`border-0 outline-0 flex-1 rounded-md px-[22px] py-[14px] bg-dark-bold/10 font-normal tracking-wide leading-6 text-sm text-dark-bold/60  italic placeholder:text-dark-bold/60 ${className}`}
         placeholder={placeholder}
