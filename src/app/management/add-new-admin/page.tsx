@@ -8,7 +8,7 @@ const AddNewAdminPage = () => {
     <RootLayout title={"Add New Admin"}>
       <MainLayout>
         <div>
-          <AddNewAdmin data={registeredAdmin} />
+          <AddNewAdmin />
         </div>
       </MainLayout>
     </RootLayout>

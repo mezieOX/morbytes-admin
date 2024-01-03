@@ -20,10 +20,13 @@ export interface IListCard {
   AdminNamesAndRoles?: string;
   formInputScreen?: boolean;
   cardItemsScreen?: boolean;
-  data: {
-    id: number;
-    title?: string;
-    image?: StaticImageData;
-    description?: string;
-  };
 }
+
+export interface IListCardData {
+  id: number;
+  title?: string;
+  image?: StaticImageData;
+  description?: string;
+}
+
+export interface IListCardArray extends Array<IListCardData> {}
