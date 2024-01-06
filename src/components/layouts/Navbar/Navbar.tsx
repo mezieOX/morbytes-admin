@@ -7,7 +7,7 @@ import { AppIcon, BarIcon, ManagementIcon, UploadsIcon } from "@/assets/icons";
 const routes = [
   {
     name: "Dashboard",
-    link: "/",
+    link: "/dashboard",
     Icon: BarIcon,
     id: 1,
   },

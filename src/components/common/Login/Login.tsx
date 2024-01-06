@@ -53,7 +53,7 @@ const Login = () => {
         </div>
         <Button
           variant="primary"
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/upload")}
           className="!text-primary !bg-dark !mt-6 hover:!text-white !transition hover:!bg-primary !text-lg !w-[15.5rem] h-auto !py-[6px] !text-[10px] !rounded-[28px] !font-normal"
         >
           {"Log In"}

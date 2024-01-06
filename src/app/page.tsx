@@ -1,10 +1,10 @@
 import RootLayout from "./layout";
-import MainLayout from "@/components/layouts";
+import { Login } from "@/components/common/Login";
 
 export default function Home() {
   return (
     <RootLayout title={"Home"} className={"!bg-dark"}>
-      <MainLayout>Hello</MainLayout>
+      <Login />
     </RootLayout>
   );
 }
