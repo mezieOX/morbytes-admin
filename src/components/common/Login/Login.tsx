@@ -8,10 +8,10 @@ import { AppIcon } from "@/assets/icons";
 import { Input } from "@/components/global";
 import { Button } from "@/components/global/Button";
 
-const Login = () => {
+const Login = ({ setLoggedIn }: { setLoggedIn: (value: boolean) => void }) => {
   const router = useRouter();
   return (
-    <div className="min-h-[100vh] pt-[7.4rem]">
+    <div className="min-h-screen  pb-60 pt-[7.4rem] bg-gray-light">
       <div className="flex items-center h-full z-[2] w-screen justify-center absolute">
         <Image
           src={LoginImg}
@@ -53,7 +53,10 @@ const Login = () => {
         </div>
         <Button
           variant="primary"
-          onClick={() => router.push("/upload")}
+          onClick={() => {
+            setLoggedIn(true);
+            router.push("/dashboard");
+          }}
           className="!text-primary !bg-dark !mt-6 hover:!text-white !transition hover:!bg-primary !text-lg !w-[15.5rem] h-auto !py-[6px] !text-[10px] !rounded-[28px] !font-normal"
         >
           {"Log In"}

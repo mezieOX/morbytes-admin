@@ -1,10 +1,9 @@
-import RootLayout from "./layout";
+"use client";
+import { useState } from "react";
+
 import { Login } from "@/components/common/Login";
 
 export default function Home() {
-  return (
-    <RootLayout title={"Home"} className={"!bg-dark"}>
-      <Login />
-    </RootLayout>
-  );
+  const [loggedIn, setLoggedIn] = useState(false);
+  return <div className="">{!loggedIn && <Login setLoggedIn={setLoggedIn} />}</div>;
 }

@@ -26,9 +26,7 @@ export default function RootLayout({
         <title>{String(pageTitle)}</title>
       </head>
       <body
-        className={`relative font-poppins ${
-          title === undefined && "bg-gray-light"
-        }  ${title !== "Login" && "bg-dark"} text-white ${className}`}
+        className={`relative font-poppins bg-dark  overflow-x-hidden text-white ${className}`}
       >
         {children}
       </body>
