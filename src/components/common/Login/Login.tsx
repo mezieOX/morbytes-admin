@@ -11,7 +11,7 @@ import { Button } from "@/components/global/Button";
 const Login = ({ setLoggedIn }: { setLoggedIn: (value: boolean) => void }) => {
   const router = useRouter();
   return (
-    <div className="min-h-screen  pb-60 pt-[7.4rem] bg-gray-light">
+    <div className="min-h-screen pt-[7.4rem] bg-gray-light">
       <div className="flex items-center h-full z-[2] w-screen justify-center absolute">
         <Image
           src={LoginImg}
