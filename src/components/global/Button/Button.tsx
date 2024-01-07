@@ -28,7 +28,7 @@ const Button: FC<IButton> = ({
           onClick={onClick}
         >
           <span
-            className={`text-[14px] mr-[.4rem] lg:pr-2 lg:ml-2.5 ml-1.5  leading-normal lg:py-2 pt-2.5 lg:pb-2 pb-1.5 ${btnSecondarySpanClassName} `}
+            className={`text-[14px] mr-[.4rem] lg:pr-2 ml-2.5   leading-normal lg:py-2 pt-2.5 lg:pb-2 pb-1.5 ${btnSecondarySpanClassName} `}
           >
             {title}
           </span>

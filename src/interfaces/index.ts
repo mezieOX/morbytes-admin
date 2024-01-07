@@ -7,3 +7,4 @@ export * from "./IPost";
 export * from "./ITextArea";
 export * from "./IListCard";
 export * from "./ISearch";
+export * from "./IDashboardCard";
