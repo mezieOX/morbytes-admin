@@ -59,7 +59,7 @@ const UploadNewSong = () => {
           ))}
           <Button
             variant={"secondary"}
-            icon={<UploadsIcon className="!w-8 !h-8" />}
+            icon={<UploadsIcon className="!w-8 !h-8 fill-current" />}
             title="Upload"
             btnSecondarySpanClassName={
               "!text-[22.5px] !tracking-wide font-black"

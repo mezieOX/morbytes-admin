@@ -10,7 +10,7 @@ const MainLayout: FC<ILayout> = ({
   wrapperClassName,
 }) => {
   return (
-    <div className={`w-full min-h-screen !mx-auto  ${wrapperClassName}`}>
+    <div className={`w-full min-h-screen !mx-auto flex  ${wrapperClassName}`}>
       <div
         className={`flex  px-[5.7rem] ${containerClass}  mx-auto bg-dark text-white`}
       >

@@ -76,6 +76,11 @@ const Navbar = () => {
                   current.includes("upload") && route.link.includes("upload")
                     ? "font-black !text-primary"
                     : ""
+                } ${
+                  current.includes("management") &&
+                  route.link.includes("management")
+                    ? "font-black !text-primary"
+                    : ""
                 } ${current === route.link ? "font-black !text-primary" : ""}`}
               >
                 <route.Icon

@@ -90,7 +90,7 @@ const PublishAHappeningNews = () => {
 
         <Button
           variant={"secondary"}
-          icon={<UploadsIcon className="!w-8 !h-8" />}
+          icon={<UploadsIcon className="!w-8 !h-8 fill-current" />}
           title="Publish"
           btnSecondarySpanClassName={"!text-[22.5px] !tracking-wide font-black"}
           btnSecondaryClassName="text-white !bg-red !px-[1.5rem] w-min !py-7 mb-[4.7rem] mt-5 !py-5  rounded"
