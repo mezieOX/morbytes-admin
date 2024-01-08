@@ -13,6 +13,7 @@ import VerifiedBadge from "./brands/VerifiedBadge";
 import EditIcon from "./Edit";
 import DeleteIcon from "./Delete";
 import AddIcon from "./Add";
+import SwitchIcon from "./Switch";
 
 export {
   AppIcon,
@@ -30,4 +31,5 @@ export {
   EditIcon,
   DeleteIcon,
   AddIcon,
+  SwitchIcon,
 };

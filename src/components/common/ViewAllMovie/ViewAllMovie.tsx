@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { IListCard, IListCardData } from "@/interfaces";
+import { IListCardData } from "@/interfaces";
 import { LoginAsCard, Search } from "@/components/global";
 import { AddIcon, DeleteIcon, EditIcon } from "@/assets/icons";
 import { Button } from "@/components/global/Button";

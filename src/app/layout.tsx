@@ -25,11 +25,7 @@ export default function RootLayout({
       <head>
         <title>{String(pageTitle)}</title>
       </head>
-      <body
-        className={`relative font-poppins bg-dark max-h-screen !overflow-x-hidden  text-white ${className}`}
-      >
-        {children}
-      </body>
+      <body className={`font-poppins bg-dark ${className}`}>{children}</body>
     </html>
   );
 }

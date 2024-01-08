@@ -1,18 +1,18 @@
 import MainLayout from "@/components/layouts";
-import RootLayout from "../layout";
+import RootLayout from "../../layout";
 import { profileTab } from "@/data";
 import ListCard from "@/components/global/ListCard/ListCard";
 
-const ViewAllMovie = () => {
+const ViewAllMovies = () => {
   return (
-    <RootLayout title={"Upload New Movie"}>
+    <RootLayout title={"Upload New Album"}>
       <MainLayout>
         <div>
           <ListCard
             data={profileTab}
+            uploadNewAlbum={true}
             loginAs={true}
             title=""
-            uploadNewMovie={true}
             search={true}
           />
         </div>
@@ -21,4 +21,4 @@ const ViewAllMovie = () => {
   );
 };
 
-export default ViewAllMovie;
+export default ViewAllMovies;

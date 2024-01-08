@@ -1,19 +1,19 @@
 import MainLayout from "@/components/layouts";
-import RootLayout from "../layout";
-import { profileTab } from "@/data";
+import { publishedNews } from "@/data";
 import ListCard from "@/components/global/ListCard/ListCard";
+import RootLayout from "@/app/layout";
 
-const ViewAllMovies = () => {
+const ViewAllMusic = () => {
   return (
-    <RootLayout title={"Upload New Music"}>
+    <RootLayout title={"Published News"}>
       <MainLayout>
         <div>
           <ListCard
-            data={profileTab}
+            data={publishedNews}
             loginAs={true}
             title=""
             search={true}
-            uploadNewSong={true}
+            publishAHappeningNews={true}
           />
         </div>
       </MainLayout>
@@ -21,4 +21,4 @@ const ViewAllMovies = () => {
   );
 };
 
-export default ViewAllMovies;
+export default ViewAllMusic;

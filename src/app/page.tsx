@@ -1,13 +1,19 @@
-"use client";
-import { useState } from "react";
-
 import { Login } from "@/components/common/Login";
+import RootLayout from "./layout";
+import MainLayout from "@/components/layouts";
 
 export default function Home() {
-  const [loggedIn, setLoggedIn] = useState(false);
   return (
-    <div className="overflow-x-hidden">
-      {!loggedIn && <Login setLoggedIn={setLoggedIn} />}
-    </div>
+    <RootLayout title={"Login"}>
+      <MainLayout
+        className="!hidden"
+        containerClass="!block w-full px-0 h-full mx-auto text-white"
+        wrapperClassName={"!bg-gray-light"}
+      >
+        <div className="">
+          <Login />
+        </div>
+      </MainLayout>
+    </RootLayout>
   );
 }

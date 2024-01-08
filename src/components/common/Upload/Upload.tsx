@@ -18,6 +18,8 @@ const lists = [
   },
 ];
 
+const route = "upload";
+
 const UploadComponent = () => {
   return (
     <Tab.Group>
@@ -50,10 +52,10 @@ const UploadComponent = () => {
           <Tab.Panel>
             <ListCard
               data={profileTab}
-              firstBtnLink="view-all-movie"
+              firstBtnLink={`view-all-movie`}
               className={"!-mt-1.5"}
-              secondBtnLink="upload-new-movie"
-              thirdBtnLink="upload-new-series"
+              secondBtnLink={`${route}/upload-new-movie`}
+              thirdBtnLink={`${route}/upload-new-series`}
               cardItemsScreen={true}
               loginAs={true}
             />
@@ -66,9 +68,9 @@ const UploadComponent = () => {
               cardItemsScreen={true}
               btnTitle={"Upload New Album"}
               btnTitle1={"Upload New Music"}
-              firstBtnLink="view-all-music"
-              secondBtnLink="upload-new-music"
-              thirdBtnLink="upload-new-album"
+              firstBtnLink={`view-all-music`}
+              secondBtnLink={`${route}/upload-new-music`}
+              thirdBtnLink={`${route}/upload-new-album`}
               loginAs={true}
             />
           </Tab.Panel>
@@ -82,7 +84,7 @@ const UploadComponent = () => {
               cardItemsScreen={true}
               btnClassName={"!gap-10"}
               firstBtnLink="view-all-published-news"
-              thirdBtnLink="published-news"
+              thirdBtnLink={`${route}/published-news`}
               loginAs={true}
             />{" "}
           </Tab.Panel>

@@ -21,16 +21,13 @@ const ListCardItem: React.FC<any> = ({
 
   let btnTitle2;
 
-  if (current === "/view-all-music") {
-    // btnTitle1 = "Upload New Song";
+  if (current === "upload/view-all-music") {
     btnTitle2 = "Upload New Album";
-  } else if (current === "/view-all-movies") {
-    // btnTitle1 = "Upload New Movie";
+  } else if (current === "upload/view-all-movies") {
     btnTitle2 = "Upload New Series";
-  } else if (current === "/published-news") {
+  } else if (current === "upload/published-news") {
     btnTitle2 = "Publish New";
   } else {
-    // btnTitle1 = "Upload New Movie";
   }
   return (
     <div

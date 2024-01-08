@@ -3,6 +3,7 @@ import { LoginAsCard } from "@/components/global";
 import { Tab } from "@headlessui/react";
 import { Button } from "@/components/global/Button";
 import { DashboardCard } from "@/components/global/DashboardCard";
+import DashboardCardChat from "./DashboardCardChat/DashboardCardChat";
 
 const lists = [
   {
@@ -21,8 +22,8 @@ const lists = [
 
 const DashboardComponent = () => {
   return (
-    <div className="w-full mt-[4.5rem] ml-14">
-      <div className="ml-auto w-full">
+    <div className="w-full mt-[4.5rem] ml-14 max-w-[56.2rem]">
+      <div className="ml-auto w-full -mr-4">
         <LoginAsCard />
       </div>
       <Tab.Group>
@@ -49,15 +50,15 @@ const DashboardComponent = () => {
             <Button
               variant={"secondary"}
               className="!text-dark shw flex !items-center !font-black !px-[13.3px] !justify-center !text-[10px] !py-[5px]"
-              title={"Download Reports"}
+              title={"Download Report"}
               btnSecondarySpanClassName="!text-[10px] !py-[5px] !pr-0 !pl-0 !w-fit !ml-[3px] !mr-0"
-              btnSecondaryClassName={`!ml-auto !w-fit !text-[10px] !text-dark !pr-3 shw flex !items-center !font-black !justify-center !w-fit`}
+              btnSecondaryClassName={`!ml-auto !w-fit !text-[10px] !text-dark !pr-3 -mr-4 shw flex !items-center !font-black !justify-center !w-fit`}
             />
           </Tab.List>
           <Tab.Panels>
             <div className={"grid grid-cols-3 gap-[2.2rem]"}>
               <DashboardCard />
-              <DashboardCard label="Music" movies={false} />
+              <DashboardCard label="Music" movies={false} music={true} />
               <DashboardCard
                 label="News"
                 movies={false}
@@ -65,11 +66,7 @@ const DashboardComponent = () => {
                 action={"Read"}
               />
             </div>
-            <div className="grid grid-cols-3 my-[3.4rem] -mr-10">
-              <div className="col-span-2"></div>
-              <DashboardCard label="Socials" movies={false} />
-              <div></div>
-            </div>
+            <DashboardCardChat />
           </Tab.Panels>
         </div>
       </Tab.Group>

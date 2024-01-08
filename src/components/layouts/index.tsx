@@ -3,11 +3,22 @@ import { FC } from "react";
 import { ILayout } from "@/interfaces/ILayout";
 import Navbar from "./Navbar/Navbar";
 
-const MainLayout: FC<ILayout> = ({ children }) => {
+const MainLayout: FC<ILayout> = ({
+  children,
+  className,
+  containerClass,
+  wrapperClassName,
+}) => {
   return (
-    <div className="flex w-full px-[5.7rem] max-w-[1430px] h-full mx-auto bg-dark text-white">
-      <Navbar />
-      {children}
+    <div className={`w-full min-h-screen !mx-auto  ${wrapperClassName}`}>
+      <div
+        className={`flex  px-[5.7rem] ${containerClass}  mx-auto bg-dark text-white`}
+      >
+        <div className={`${className}`}>
+          <Navbar />
+        </div>
+        {children}
+      </div>
     </div>
   );
 };

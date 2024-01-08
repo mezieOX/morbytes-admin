@@ -1,5 +1,5 @@
 import MainLayout from "@/components/layouts";
-import RootLayout from "../layout";
+import RootLayout from "../../layout";
 import { profileTab } from "@/data";
 import ListCard from "@/components/global/ListCard/ListCard";
 
