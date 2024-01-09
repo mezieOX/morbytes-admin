@@ -7,7 +7,7 @@ export default function Home() {
     <RootLayout title={"Login"}>
       <MainLayout
         className="!hidden"
-        containerClass="!block w-full px-0 h-full mx-auto text-white"
+        containerClass="!block w-full px-0 h-full mx-auto !bg-gray-light text-white"
         wrapperClassName={"!bg-gray-light"}
       >
         <div className="">
