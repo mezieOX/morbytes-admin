@@ -1,5 +1,9 @@
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import ReactApexChart from "react-apexcharts";
+
+const DynamicReactApexChart = dynamic(() => import("react-apexcharts"), {
+  ssr: false,
+});
 
 const ApexChart = () => {
   const [series, setSeries] = useState<Array<{ name: string; data: number[] }>>(
@@ -23,7 +27,7 @@ const ApexChart = () => {
     ]
   );
 
-  const [options] = useState<any>({
+  const [options, setOptions] = useState<any>({
     chart: {
       height: 350,
       type: "line",
@@ -107,14 +111,12 @@ const ApexChart = () => {
   });
 
   return (
-    <div id="chart">
-      <ReactApexChart
-        options={options}
-        series={series}
-        type="line"
-        height={350}
-      />
-    </div>
+    <DynamicReactApexChart
+      options={options}
+      series={series}
+      type="line"
+      height={350}
+    />
   );
 };
 
