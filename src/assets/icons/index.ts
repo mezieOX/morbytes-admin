@@ -14,6 +14,7 @@ import EditIcon from "./Edit";
 import DeleteIcon from "./Delete";
 import AddIcon from "./Add";
 import SwitchIcon from "./Switch";
+import BlueIcon from "./Blue";
 
 export {
   AppIcon,
@@ -32,4 +33,5 @@ export {
   DeleteIcon,
   AddIcon,
   SwitchIcon,
+  BlueIcon,
 };

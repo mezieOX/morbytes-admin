@@ -3,7 +3,7 @@ import { LoginAsCard } from "@/components/global";
 import { Tab } from "@headlessui/react";
 import { Button } from "@/components/global/Button";
 import { DashboardCard } from "@/components/global/DashboardCard";
-import DashboardCardChat from "./DashboardCardChat/DashboardCardChat";
+import DashboardCardChat from "./DashboardCardChart/DashboardCardChart";
 
 const lists = [
   {

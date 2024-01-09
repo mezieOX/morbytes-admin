@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import { IListCard, IListCardData } from "@/interfaces";
+import { IListCardData } from "@/interfaces";
 import { LoginAsCard } from "@/components/global";
 import { AddIcon } from "@/assets/icons";
 import { Button } from "@/components/global/Button";
@@ -9,7 +9,7 @@ import ManagementListCardItem from "./ManagementListCardItem/ManagementListCardI
 
 const Management: React.FC<{ data?: IListCardData[] }> = ({ data = [] }) => {
   return (
-    <div className={`w-full mt-[4.7rem]`}>
+    <div className={`w-full mt-[4.7rem] `}>
       <LoginAsCard />
 
       <div className={`pl-10 py-[39px]`}>

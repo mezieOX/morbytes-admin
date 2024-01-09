@@ -7,7 +7,7 @@ const ManagementPage = () => {
   return (
     <RootLayout title={"Management"}>
       <MainLayout>
-        <div>
+        <div className="">
           <Management data={registeredAdmin} />
         </div>
       </MainLayout>
