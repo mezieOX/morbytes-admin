@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import ReactApexChart from "react-apexcharts";
 
 const DynamicReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -28,11 +29,18 @@ const ApexChart = () => {
   );
 
   const [options, setOptions] = useState<any>({
+    colors: ["#33A02C", "#1F78B4", "#B2DF8A", "#A6CEE3"],
     chart: {
       height: 350,
       type: "line",
       zoom: {
         enabled: false,
+      },
+      export: {
+        enabled: false,
+      },
+      toolbar: {
+        show: false,
       },
     },
     contextmenu: {
@@ -48,14 +56,8 @@ const ApexChart = () => {
     },
 
     legend: {
-      tooltipHoverFormatter: function (val: any, opts: any) {
-        return (
-          val +
-          " - " +
-          opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-          ""
-        );
-      },
+      tooltipHoverFormatter: null,
+      show: false,
     },
     markers: {
       size: 0,
@@ -80,6 +82,7 @@ const ApexChart = () => {
       },
     },
     tooltip: {
+      enabled: false,
       y: [
         {
           title: {
